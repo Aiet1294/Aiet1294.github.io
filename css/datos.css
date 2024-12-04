@@ -1,0 +1,137 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Ajustes para la imagen del logo */
+.header img {
+    height: 150px; /* Ajusta el tamaño del logo */
+}
+.header h1{
+        text-shadow: 5px 5px 10px  white;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+/* Main */
+main {
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+/* Datos de la tarjeta */
+.tarjeta-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tarjeta-info td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tarjeta-info td strong {
+    color: #333;
+}
+
+input[type="text"],
+input[type="month"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Botón continuar */
+.btn.continuar {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #dc3545;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+/* Hover para el botón */
+.btn.continuar:hover {
+    background-color: #e67e22;
+}
+/* Footer */
+.footer {
+    color: white;
+    background-color: #222;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hacer responsive */
+@media (max-width: 768px) {
+    .tabla-tarjetas th, .tabla-tarjetas td {
+        font-size: 0.9rem;
+    }
+
+    .tarjeta-img {
+        width: 40px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

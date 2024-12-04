@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Tarjeta</title>
+    <link rel="stylesheet" href="../css/datos.css"> 
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="../img/logo.jpg" alt="logoa" >
+            <h1 class="logo"  style="text-shadow: 5px 5px 10px  white;">GimFit Store ®</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/maquinas.html">Máquinas</a></li>
+                    <li><a href="pages/discos.html">Discos</a></li>
+                    <li><a href="pages/pesas.html">Pesas</a></li>
+                    <li><a href="pages/accesorios.html">Accesorios</a></li>
+                    <li><a href="pages/checkout.html">Tu Cesta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Detalles de la Tarjeta</h2>
+
+            <!-- Datos de la tarjeta -->
+            <div class="tarjeta-info">
+                <table>
+                    <tr>
+                        <td><strong>Tipo de Tarjeta:</strong></td>
+                        <td><select name="tipo_tarjeta" required>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                            <option value="discover">Discover</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Titular:</strong></td>
+                        <td><input type="text" name="titular" placeholder="Juan Pérez" required></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Número:</strong></td>
+                        <td><input type="text" name="numero" placeholder="**** **** **** 1234" maxlength="19" required></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha de Expiración:</strong></td>
+                        <td><input type="month" name="fecha_expiracion" required></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CVC:</strong></td>
+                        <td><input type="text" name="cvc" placeholder="123" maxlength="3" required></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Botón Continuar -->
+            <button class="btn continuar" onclick="location.href='confirmacion.html';">
+                Continuar
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GimFit Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

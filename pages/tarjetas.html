@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Tarjeta de Crédito</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tarjetas.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="../img/logo.jpg" alt="logoa" >
+            <h1 class="logo" style="text-shadow: 5px 5px 10px  white;">GimFit Store ®</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/maquinas.html">Máquinas</a></li>
+                    <li><a href="pages/discos.html">Discos</a></li>
+                    <li><a href="pages/pesas.html">Pesas</a></li>
+                    <li><a href="pages/accesorios.html">Accesorios</a></li>
+                    <li><a href="pages/checkout.html">Tu Cesta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Selecciona tu Tarjeta de Crédito</h2>
+            <table class="tabla-tarjetas">
+                <thead>
+                    <tr>
+                        <th>Tipo de Tarjeta</th>
+                        <th>Descripción</th>
+                        <th>Seleccionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="img/visa.png" alt="Visa" class="tarjeta-img"></td>
+                        <td>Visa - Aceptada en todo el mundo</td>
+                        <td><input type="radio" name="tarjeta" value="visa"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/mastercard.png" alt="Mastercard" class="tarjeta-img"></td>
+                        <td>Mastercard - Seguridad avanzada</td>
+                        <td><input type="radio" name="tarjeta" value="mastercard"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/amex.png" alt="American Express" class="tarjeta-img"></td>
+                        <td>American Express - Exclusiva y Premium</td>
+                        <td><input type="radio" name="tarjeta" value="amex"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/discover.png" alt="Discover" class="tarjeta-img"></td>
+                        <td>Discover - Beneficios exclusivos</td>
+                        <td><input type="radio" name="tarjeta" value="discover"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn continuar" onclick="location.href='datostarjeta.html';">
+                Continuar
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GimFit Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

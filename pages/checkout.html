@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="../img/logo.jpg" alt="logoa" >
+            <h1 class="logo">GimFit Store ®</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/maquinas.html">Máquinas</a></li>
+                    <li><a href="../pages/discos.html">Discos</a></li>
+                    <li><a href="../pages/pesas.html">Pesas</a></li>
+                    <li><a href="../pages/accesorios.html">Accesorios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Tu Carrito</h2>
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cart-container">
+                    <!-- Ejemplo de productos en el carrito -->
+                    <tr>
+                        <td>Mancuernas Ajustables 10kg</td>
+                        <td>€50.00</td>
+                        <td><input type="number" value="1" min="1" /></td>
+                        <td>€50.00</td>
+                        <td class="item-delete"><button>Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bicicleta Estática</td>
+                        <td>€200.00</td>
+                        <td><input type="number" value="1" min="1" /></td>
+                        <td>€200.00</td>
+                        <td class="item-delete"><button>Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Colchoneta de Yoga</td>
+                        <td>€25.00</td>
+                        <td><input type="number" value="2" min="1" /></td>
+                        <td>€50.00</td>
+                        <td class="item-delete"><button>Eliminar</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="total">Total</td>
+                        <td colspan="2">€<span id="total-price">300.00</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="btn continuar" onclick="location.href='personal-info.html';">
+                Continuar
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GimFit Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

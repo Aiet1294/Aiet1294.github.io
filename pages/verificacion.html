@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Pedido</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/verificacion.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="../img/logo.jpg" alt="logoa" >
+            <h1 class="logo"  style="text-shadow: 5px 5px 10px  white;">GimFit Store ®</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="verificacion-container">
+            <h2>Verifica tu pedido</h2>
+
+            <!-- Sección de productos -->
+            <div class="productos-verificacion">
+                <h3>Productos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio unitario</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productos-body">
+                        <!-- Los productos se añadirán dinámicamente -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total:</strong></td>
+                            <td id="total-pedido"><strong>0,00 €</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Sección de datos -->
+            <div class="datos-verificacion">
+                <h3>Tus datos</h3>
+                <table>
+                    <tbody id="datos-body">
+                        <!-- Los datos se añadirán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Acciones de verificación -->
+            <div class="acciones-verificacion">
+                <button class="btn editar" onclick="location.href='personal-info.html';">Editar información</button>
+                <button class="btn confirmar" onclick="location.href='tarjetas.html';">Confirmar pedido</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GimFit Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
