@@ -36,13 +36,31 @@
                             <th>Total</th>
                         </tr>
                     </thead>
-                    <tbody id="productos-body">
-                        <!-- Los productos se añadirán dinámicamente -->
+                    <tbody id="cart-container">
+                        <!-- Ejemplo de productos en el carrito -->
+                        <tr>
+                            <td>Mancuernas Ajustables 10kg</td>
+                            <td>€50.00</td>
+                            <td><input type="number" value="1" min="1" /></td>
+                            <td>€50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta Estática</td>
+                            <td>€200.00</td>
+                            <td><input type="number" value="1" min="1" /></td>
+                            <td>€200.00</td>
+                        </tr>
+                        <tr>
+                            <td>Colchoneta de Yoga</td>
+                            <td>€25.00</td>
+                            <td><input type="number" value="2" min="1" /></td>
+                            <td>€50.00</td>
+                        </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="3"><strong>Total:</strong></td>
-                            <td id="total-pedido"><strong>0,00 €</strong></td>
+                            <td colspan="3" class="total">Total</td>
+                            <td colspan="2">€<span id="total-price">300.00</span></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -51,9 +69,20 @@
             <!-- Sección de datos -->
             <div class="datos-verificacion">
                 <h3>Tus datos</h3>
-                <table>
+                <table class="certical-table">  
+                    <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Direccion</th>
+                        <th>Correo electronico</th>
+                    </tr>
+                    </thead>
                     <tbody id="datos-body">
-                        <!-- Los datos se añadirán dinámicamente -->
+                        <tr>
+                            <td>Aitzol Etxaburu Etxebarria</td>
+                            <td>Burkina Faso</td>
+                            <td>Daw24aiet@ikasle.leartik.eus</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -65,7 +94,7 @@
             </div>
         </div>
     </main>
-    
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 GimFit Store. Todos los derechos reservados.</p>
