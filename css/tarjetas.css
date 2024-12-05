@@ -11,9 +11,23 @@ body {
     color: #222;
     line-height: 1.6;
 }
+
+/* Header */
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 4rem; /* Tamaño de la fuente del nombre del logo */
+}
+
 /* Ajustes para la imagen del logo */
 .header img {
     height: 150px; /* Ajusta el tamaño del logo */
+    margin-right: 15px;
 }
 .header h1{
         text-shadow: 5px 5px 10px  white;
@@ -23,6 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .nav-links {

@@ -6,9 +6,18 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    
+    overflow: scroll;
+    box-sizing: border-box;
 }
 
+/* Solo afecta los párrafos dentro de .container */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: bold;
+}
 /* Acordeón 
 .accordion {
     margin: 20px 0;
@@ -67,23 +76,25 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Header */
 .header {
     background-color: #222;
     color: #fff;
-    padding: 15px 0;
+    padding: 15px;
 }
 .header .logo {
     display: flex;
     align-items: center;
-    font-size: 5rem; /* Tamaño de la fuente del nombre del logo */
+    font-size: 4rem; /* Tamaño de la fuente del nombre del logo */
 }
 
 /* Ajustes para la imagen del logo */
 .header img {
     height: 150px; /* Ajusta el tamaño del logo */
+    margin-right: 15px;
 }
 .header h1{
         text-shadow: 5px 5px 10px  white;
@@ -93,12 +104,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
+/* Menú Hamburguesa */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+/* Menú principal */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -110,7 +137,6 @@ body {
 .nav-links a:hover {
     color: #e67e22;
 }
-
 /* Welcome Section (Index) 
 .welcome {
     text-align: center;
@@ -168,7 +194,6 @@ body {
 }*/
 
 /*Productos*/
-
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
@@ -205,24 +230,10 @@ body {
     color: #333;
 }
 
-@media (max-width: 768px) {
-    .productos-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 480px) {
-    .productos-grid {
-        grid-template-columns: 1fr; 
-    }
-}
-
 .price {
     font-size: 1.2rem;
     color: #e67e22;
 }
-
-
 
 /* Footer */
 .footer {
@@ -232,25 +243,11 @@ body {
     padding: 15px 0;
 }
 
-.footer a {
+.footer p {
     color: white;
     text-decoration: none;
 }
 
-.footer a:hover {
-    color: #e67e22;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .category-grid, .product-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
 /* Tabla del carrito */
 .tabla-carrito {
@@ -383,22 +380,6 @@ body {
     font-weight: bold;
 }
 
-/* Botón de continuar */
-.btn {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #dc3545; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #e68900;
-}
-
 /* Total */
 .tabla-carrito .total {
     font-weight: bold;
@@ -472,11 +453,17 @@ form label {
     font-weight: bold;
     color: #333;
 }
+/* Título Principal */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
 
 /* Campos de entrada */
 form input[type="text"],
 form input[type="email"] {
-    width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
@@ -513,8 +500,40 @@ form input[type="email"]:focus {
     background-color: #e67e22;
 }
 
-/* Responsive Design */
+/* Botón de continuar */
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
 @media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .category-grid, .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
     .container {
         padding: 1rem;
     }
@@ -530,5 +549,15 @@ form input[type="email"]:focus {
 
     .btn.continuar {
         width: 100%;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Poner el menú en columna */
+        align-items: center; /* Centrar los enlaces */
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px 0; /* Añadir un poco de espacio arriba y abajo de cada enlace */
     }
 }
