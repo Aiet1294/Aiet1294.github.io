@@ -125,23 +125,62 @@ tfoot td {
     background-color: #e67e22;
 }
 
-/* Responsive Design */
+/* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
-
-    .nav-links {
-        margin-top: 1rem;
+    .verificacion-container {
+        padding: 1rem; /* Reduce los márgenes */
+        text-align: center; /* Centra el contenido */
     }
 
-    .verificacion-container {
+    /* Títulos principales */
+    .verificacion-container h2, 
+    .verificacion-container h3 {
+        font-size: 1.4rem; /* Ajusta el tamaño del título */
+        margin-bottom: 1rem;
+    }
+
+    /* Tablas de productos y datos */
+    .productos-verificacion table, 
+    .datos-verificacion table {
+        width: 100%; /* Asegura que las tablas ocupen todo el ancho */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
+        display: block; /* Asegura que las tablas sean visibles en pantallas pequeñas */
+    }
+
+    .productos-verificacion th, 
+    .productos-verificacion td,
+    .datos-verificacion th,
+    .datos-verificacion td {
+        padding: 0.5rem; /* Reduce los espacios */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    /* Inputs en la tabla */
+    .productos-verificacion input[type="number"] {
+        width: 50px; /* Ajusta el ancho */
+        font-size: 0.9rem;
+        margin: 0 auto; /* Centra los inputs */
+    }
+
+    /* Botones */
+    .acciones-verificacion {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column; /* Organiza los botones en columna */
+        gap: 1rem; /* Añade espacio entre los botones */
+    }
+
+    .acciones-verificacion .btn {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho */
+        padding: 0.7rem; /* Botón más compacto */
+        font-size: 1rem; /* Tamaño del texto ajustado */
+    }
+
+    /* General */
+    .footer .container {
+        text-align: center; /* Centra el texto del footer */
         padding: 1rem;
     }
-
-    table th, table td {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        width: 100%;
-        margin-top: 1rem;
-    }
 }
+

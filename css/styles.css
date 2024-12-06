@@ -525,24 +525,65 @@ form input[type="email"]:focus {
 }
 
 @media  (max-width: 768px) {
-    .header {
-        display: grid; 
+    .container {
         flex-direction: column;
+        align-items: flex-start;
     }
+
+    .header h1 {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        flex: 100%; /* Ocupa todo el ancho */
+        text-align: center;
+    }
+    .header img {
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+        display: grid; /* Cambiamos a grid */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: 100%;
+        background-color: #444;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: #555;
+    }
+
+    .tabla-carrito {
+        width: 100%; /* Asegura que la tabla se ajuste al ancho */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    .tabla-carrito th, 
+    .tabla-carrito td {
+        padding: 0.2rem; /* Reduce el espacio en celdas */
+    }
+
+    .tabla-carrito input[type="number"] {
+        width: 50px; /* Ajusta el ancho del campo de número */
+        font-size: 0.5rem; /* Texto más pequeño */
+    }
+
+    .item-delete button {
+        padding: 0.3rem 0.5rem; /* Reduce el tamaño del botón */
+        font-size: 0.8rem;
+    }
+
     .productos-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
     }
-
-    .productos-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
 
     .container {
         padding: 1rem;
@@ -558,16 +599,9 @@ form input[type="email"]:focus {
     }
 
     .btn.continuar {
-        width: 100%;
+        margin-top: 1rem;
+        padding: 0.7rem 1.2rem; /* Botón más compacto */
+        font-size: 1rem;
     }
-    .nav-links {
-        display: flex;
-        flex-direction: column; /* Poner el menú en columna */
-        align-items: center; /* Centrar los enlaces */
-        gap: 10px;
-    }
-
-    .nav-links a {
-        padding: 10px 0; /* Añadir un poco de espacio arriba y abajo de cada enlace */
-    }
+    
 }

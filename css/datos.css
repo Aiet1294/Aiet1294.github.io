@@ -12,18 +12,35 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 4rem; /* Tamaño de la fuente del nombre del logo */
+}
+
 /* Ajustes para la imagen del logo */
 .header img {
     height: 150px; /* Ajusta el tamaño del logo */
+    margin-right: 15px;
 }
-.header h1{
-        text-shadow: 5px 5px 10px  white;
+
+.header h1 {
+    text-shadow: 5px 5px 10px  white;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    width: 100%; /* Asegura que el contenedor se ajuste automáticamente */
 }
 
 .nav-links {
@@ -53,6 +70,7 @@ main {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que el contenedor se ajuste automáticamente */
 }
 
 h2 {
@@ -60,34 +78,28 @@ h2 {
     margin-bottom: 2rem;
     color: #2c3e50;
 }
-/* Datos de la tarjeta */
+
+/* Formulario de detalles de tarjeta */
 .tarjeta-info table {
-    width: 100%;
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .tarjeta-info td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.tarjeta-info td strong {
-    color: #333;
-}
-
-input[type="text"],
-input[type="month"],
-select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 15px;
     font-size: 1rem;
 }
 
-/* Botón continuar */
+.tarjeta-info select, .tarjeta-info input {
+    width: 100%; /* Asegura que los campos de formulario ocupen todo el ancho */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Botón Continuar */
 .btn.continuar {
     padding: 10px 20px;
     border: none;
@@ -101,12 +113,14 @@ select {
     transition: background-color 0.3s ease;
     margin-top: 1rem;
     align-self: flex-start;
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
 }
 
 /* Hover para el botón */
 .btn.continuar:hover {
     background-color: #e67e22;
 }
+
 /* Footer */
 .footer {
     color: white;
@@ -118,20 +132,58 @@ select {
 .footer .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%; /* Asegura que el contenedor del footer también se ajuste automáticamente */
 }
 
-/* Hacer responsive */
+/* Media Query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    .tabla-tarjetas th, .tabla-tarjetas td {
-        font-size: 0.9rem;
+    /* Ajustes para el logo y navegación */
+    .header .logo {
+        font-size: 2.5rem; /* Reducir tamaño del logo */
     }
 
-    .tarjeta-img {
-        width: 40px;
+    .header .container {
+        flex-direction: column; /* Cambiar la disposición del header a columna */
+        align-items: center; /* Centrar los elementos del header */
+        text-align: center; /* Centrar los elementos */
     }
 
-    .btn {
-        width: 100%;
-        margin-top: 1rem;
+    .nav-links {
+        flex-direction: column; /* Colocar los enlaces de navegación en columna */
+        gap: 10px;
+        text-align: center; /* Centrar los enlaces */
+        width: 100%; /* Asegurar que los enlaces ocupen todo el ancho disponible */
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Ajustar el tamaño de la fuente */
+        padding: 10px 0;
+    }
+
+    /* Ajustes para la tabla */
+    .tarjeta-info table {
+        width: 100%; /* Ajustar la tabla a todo el ancho disponible */
+    }
+
+    .tarjeta-info td {
+        padding: 10px;
+    }
+
+    /* Ajustes para los campos del formulario */
+    .tarjeta-info select, .tarjeta-info input {
+        width: 100%; /* Asegura que los campos del formulario ocupen todo el ancho */
+    }
+
+    /* Botón Continuar */
+    .btn.continuar {
+        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+        font-size: 1rem; /* Reducir tamaño de la fuente */
+    }
+
+    /* Footer: Centrar texto */
+    .footer .container {
+        text-align: center;
+        padding: 1rem;
+        width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
     }
 }
