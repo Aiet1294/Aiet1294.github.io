@@ -1,15 +1,33 @@
-/* General */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* General */
 body {
-    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Evita el scroll horizontal no deseado */
+    box-sizing: border-box;
+}
+
+/* Solo afecta los párrafos dentro de .container */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
@@ -61,65 +79,53 @@ body {
     color: #e67e22;
 }
 
-/* Main */
+/* Main Section */
 main {
-    padding: 2rem;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Asegura que el contenedor se ajuste automáticamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
 
-h2 {
+/* Cinta Correr */
+.cinta-correr {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #2c3e50;
+    margin: 20px 0;
 }
 
-/* Formulario de detalles de tarjeta */
-.tarjeta-info table {
-    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
-    border-collapse: collapse;
-    margin-top: 20px;
+.cinta-correr img {
+    max-width: 100%;
+    height: auto; /* Cambié la altura fija a auto para mantener las proporciones */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta-info td {
-    padding: 15px;
-    font-size: 1rem;
-}
-
-.tarjeta-info select, .tarjeta-info input {
-    width: 100%; /* Asegura que los campos de formulario ocupen todo el ancho */
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-/* Botón Continuar */
-.btn.continuar {
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    background-color: #dc3545;
-    font-size: 1.2rem;
+.cinta-correr h2 a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #e63946;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-    align-self: flex-start;
 }
 
-/* Hover para el botón */
-.btn.continuar:hover {
-    background-color: #e67e22;
+.cinta-correr {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px auto;
+    color: #333;
+    line-height: 1.8;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Amplié un poco el ancho máximo para una mejor visualización */
+}
+
+.cinta-correr ul {
+    margin: 10px 0; /* Ajusté los márgenes de la lista */
+    text-align: left;
+    padding-left: 20px; /* Mejor separación visual */
+    line-height: 1.8;
 }
 
 /* Footer */
@@ -144,7 +150,7 @@ h2 {
     color: white;
 }
 
-/* Media Query para pantallas pequeñas (hasta 768px) */
+/* Responsive Design */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -206,34 +212,13 @@ h2 {
         transition-delay: 0.6s;
     }
 
-    /* Ajustes para la tabla */
-    .tarjeta-info table {
-        width: 100%; /* Ajustar la tabla a todo el ancho disponible */
+    /* Ajustes para la sección de "Cinta de Correr" en pantallas pequeñas */
+    .cinta-correr h3 {
+        font-size: 1.2rem; /* Ajusté el tamaño para mejorar la legibilidad */
+        line-height: 1.8;
     }
 
-    .tarjeta-info td {
-        padding: 10px;
+    .cinta-correr img {
+        height: auto; /* Mejor para que la imagen se adapte correctamente */
     }
-
-    /* Ajustes para los campos del formulario */
-    .tarjeta-info select, .tarjeta-info input {
-        width: 100%; /* Asegura que los campos del formulario ocupen todo el ancho */
-    }
-
-    /* Botón Continuar */
-    .btn.continuar {
-        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
-        font-size: 1rem; /* Reducir tamaño de la fuente */
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        }
-    }
-
-    /* Footer: Centrar texto */
-    .footer .container {
-        text-align: center;
-        padding: 1rem;
-        width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
-    }
+}

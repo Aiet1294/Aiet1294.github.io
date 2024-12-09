@@ -8,13 +8,13 @@
 
 body {
     background-color: #f9f9f9;
-    color: #222;
+    color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: #222;
+    background-color: #333;
     color: #fff;
     padding: 15px;
 }
@@ -22,7 +22,7 @@ body {
 .header .logo {
     display: flex;
     align-items: center;
-    font-size: 4rem; /* Tamaño de la fuente del nombre del logo */
+    font-size: 3rem; /* Tamaño de la fuente del nombre del logo */
 }
 
 /* Ajustes para la imagen del logo */
@@ -32,7 +32,9 @@ body {
 }
 
 .header h1 {
-    text-shadow: 5px 5px 10px  white;
+    font-size: 1.8rem;
+    text-shadow: 3px 3px 5px white;
+    margin: 0;
 }
 
 .header .container {
@@ -40,13 +42,13 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    width: 100%; /* Asegura que el contenedor se ajuste automáticamente */
 }
 
+/* Menú principal */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -138,60 +140,86 @@ h2 {
 
 /* Footer */
 .footer {
+    background-color: #333;
     color: white;
-    background-color: #222;
-    padding: 1rem 0;
     text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%; /* Asegura que el contenedor del footer también se ajuste automáticamente */
+.footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    color: white;
 }
 
 /* Media Query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    /* Ajustes para el logo y navegación */
-    .header .logo {
-        font-size: 2rem; /* Reduce el tamaño del logo */
+    .header {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .header .container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .header img {
+        height: 50px;
+        margin: 5px 0;
     }
 
     .header h1 {
-        margin-bottom: 0.5rem;
         font-size: 1.5rem;
-        flex: 100%; /* Ocupa todo el ancho */
-        text-align: center;
     }
-    .header img {
-        margin-bottom: 0.5rem;
-    }
-    
+
     .nav-links {
-        display: grid; /* Cambiamos a grid */
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 0.5rem;
-        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
     }
 
     .nav-links a {
-        font-size: 1rem;
-        padding: 0.5rem;
-        width: 100%;
-        background-color: #444;
-        border-radius: 5px;
-        text-align: center;
+        font-size: 1.2rem; /* Aumento el tamaño de los enlaces en móviles */
     }
 
-    .nav-links a:hover {
-        background-color: #555;
+    .nav-links li {
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        opacity: 0;
+    }
+
+    .nav-links:hover li {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .nav-links li:nth-child(6) {
+        transition-delay: 0.6s;
     }
 
     /* Ajustes para la tabla */
