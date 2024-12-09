@@ -113,7 +113,6 @@ h2 {
     transition: background-color 0.3s ease;
     margin-top: 1rem;
     align-self: flex-start;
-    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
 }
 
 /* Hover para el botón */
@@ -178,6 +177,11 @@ h2 {
     .btn.continuar {
         width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
         font-size: 1rem; /* Reducir tamaño de la fuente */
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        }
     }
 
     /* Footer: Centrar texto */
@@ -186,4 +190,3 @@ h2 {
         padding: 1rem;
         width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
     }
-}

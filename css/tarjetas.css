@@ -129,7 +129,6 @@ h2 {
     text-align: center;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
-    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
 }
 
 /* Hover para el botón */
@@ -207,9 +206,13 @@ h2 {
 
     /* Ajuste para el botón */
     .btn.continuar {
-        width: 100%;
-        padding: 12px;
-    }
+        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+        font-size: 1rem; /* Reducir tamaño de la fuente */
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        }
 
     /* Ajustes para los márgenes en el footer */
     .footer .container {
