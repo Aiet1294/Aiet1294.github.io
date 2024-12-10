@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* General */
@@ -40,12 +41,14 @@ p {
 .header .logo {
     display: flex;
     align-items: center;
-    font-size: 3rem; /* Tamaño de la fuente del nombre del logo */
+    font-size: 3rem;
+    /* Tamaño de la fuente del nombre del logo */
 }
 
 /* Ajustes para la imagen del logo */
 .header img {
-    height: 150px; /* Ajusta el tamaño del logo */
+    height: 150px;
+    /* Ajusta el tamaño del logo */
     margin-right: 15px;
 }
 
@@ -99,13 +102,28 @@ h2 {
 }
 
 .container h3 a:hover {
-    color: #c82333; /* Darker shade on hover */
+    color: #c82333;
+    /* Darker shade on hover */
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-central {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e63946;
 }
 
 /*Productos*/
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 3fr);/* Cuatro columnas */
+    grid-template-columns: repeat(4, 3fr);
+    /* Cuatro columnas */
     gap: 20px;
     margin-top: 20px;
 }
@@ -160,7 +178,8 @@ h2 {
 /*Cinta de Correr*/
 .cinta-correr {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);/* Cuatro columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Cuatro columnas */
     margin-top: 20px;
     justify-content: space-between;
     align-items: center;
@@ -170,10 +189,12 @@ h2 {
 .cinta-correr h3 {
     color: #333;
 }
+
 .cinta-correr li {
     color: #333;
     font-size: large;
 }
+
 .cinta-correr img {
     height: 400px;
     margin-left: auto;
@@ -229,18 +250,26 @@ h2 {
 }
 
 .vertical-table {
-    display: inline-block; /* Necesario para aplicar transform */
-    writing-mode: vertical-lr; /* Cambia la dirección del texto */
-    transform: rotate(180deg); /* Gira la tabla completa */
-    border-collapse: collapse; /* Opcional: para manejar bordes */
-    margin: 10px auto; /* Centra la tabla dentro del contenedor */
+    display: inline-block;
+    /* Necesario para aplicar transform */
+    writing-mode: vertical-lr;
+    /* Cambia la dirección del texto */
+    transform: rotate(180deg);
+    /* Gira la tabla completa */
+    border-collapse: collapse;
+    /* Opcional: para manejar bordes */
+    margin: 10px auto;
+    /* Centra la tabla dentro del contenedor */
 }
 
 .vertical-table th,
 .vertical-table td {
-    border: 1px solid black; /* Añade bordes */
-    padding: 8px; /* Espaciado interno */
-    text-align: center; /* Alinea texto en el centro de cada celda */
+    border: 1px solid black;
+    /* Añade bordes */
+    padding: 8px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alinea texto en el centro de cada celda */
 }
 
 /* Estilo de las celdas */
@@ -550,10 +579,6 @@ form input[type="email"]:focus {
 
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
     .header {
         flex-direction: column;
@@ -577,7 +602,8 @@ form input[type="email"]:focus {
     }
 
     .nav-links a {
-        font-size: 1.2rem; /* Aumento el tamaño de los enlaces en móviles */
+        font-size: 1.2rem;
+        /* Aumento el tamaño de los enlaces en móviles */
     }
 
     .nav-links li {
@@ -614,7 +640,7 @@ form input[type="email"]:focus {
     .nav-links li:nth-child(6) {
         transition-delay: 0.6s;
     }
-    
+
     .cinta-correr {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -622,6 +648,7 @@ form input[type="email"]:focus {
     .cinta-correr img {
         max-width: 100%;
     }
+
     .nav-links a:hover {
         background-color: #555;
     }
@@ -656,7 +683,8 @@ form input[type="email"]:focus {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .producto-item p{
+
+    .producto-item p {
         margin: 0 auto;
 
     }
@@ -673,7 +701,8 @@ form input[type="email"]:focus {
     form input[type="email"] {
         font-size: 0.9rem;
     }
-    .btn.continuar{
+
+    .btn.continuar {
         padding: 10px 20px;
         font-size: 1.2rem;
         font-weight: bold;
