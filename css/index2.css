@@ -98,6 +98,10 @@ main {
     text-align: center; 
 
 }
+
+[class*="col-"] {
+    padding: 15px;
+}
 .menu ul {
     list-style-type: none;
     margin: 0;
