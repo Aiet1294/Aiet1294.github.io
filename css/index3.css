@@ -48,7 +48,7 @@ p {
 
 /* Ajustes para la imagen del logo */
 .header img {
-    max-width: 12.5%;
+    width: 150px;
     /* Ajusta el tamaño del logo */
 }
 
