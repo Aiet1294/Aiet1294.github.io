@@ -54,7 +54,7 @@ p {
 
 .header h1 {
     font-size: 1.8rem;
-    text-shadow: 3px 3px 5px white;
+    text-shadow: 5px 5px 10px white;
     margin: 0;
 }
 
@@ -103,6 +103,53 @@ main {
 [class*="col-"] {
     padding: 15px;
 }
+
+
+/*Productos*/
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    /* Cuatro columnas */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.producto-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.producto-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto-item h4 {
+    color: #555;
+}
+
+.producto-item h4 a {
+    text-decoration: none;
+    color: #444;
+}
+
+.producto-item h4 a:hover {
+    color: #007bff;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -173,28 +220,29 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        width: 100%;
     }
 
     .header img {
-        height: 50px;
-        margin: 5px 0;
+        margin: 5px;
+        max-width: 100%;    
+        height: 75px;
     }
 
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important; /* Ajuste sugerido: tamaño más legible */
+        text-align: center; /* Opcional: centra el texto si es necesario */
+        margin: 0; /* Asegura que no haya margen extra */
     }
+    
 
     .nav-links {
         flex-direction: column;
         gap: 0;
         align-items: center;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem; /* Aumento el tamaño de los enlaces en móviles */
     }
 
     .nav-links li {

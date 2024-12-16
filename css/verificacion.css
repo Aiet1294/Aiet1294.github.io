@@ -34,7 +34,7 @@ body {
 
 .header h1 {
     font-size: 1.8rem;
-    text-shadow: 3px 3px 5px white;
+    text-shadow: 5px 5px 10px white;
     margin: 0;
 }
 
@@ -171,28 +171,28 @@ tfoot td {
 @media (max-width: 768px) {
 
     .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        width: 100%;
     }
 
     .header img {
-        height: 50px;
-        margin: 5px 0;
+        margin: 5px;
+        max-width: 100%;    
+        height: 75px;
     }
 
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important; /* Ajuste sugerido: tamaño más legible */
+        text-align: center; /* Opcional: centra el texto si es necesario */
+        margin: 0; /* Asegura que no haya margen extra */
     }
 
     .nav-links {
         flex-direction: column;
         gap: 0;
         align-items: center;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem; /* Aumento el tamaño de los enlaces en móviles */
     }
 
     .nav-links li {
