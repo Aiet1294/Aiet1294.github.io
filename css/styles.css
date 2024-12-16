@@ -63,6 +63,7 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    max-width: 960px;
 }
 
 /* Menú principal */
@@ -632,5 +633,11 @@ form input[type="email"]:focus {
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 1rem;
+    }
+
+    /* General */
+    .footer .container {
+        text-align: center; /* Centra el texto del footer */
+        padding: 1rem;
     }
 }
