@@ -22,12 +22,14 @@ body {
 .header .logo {
     display: flex;
     align-items: center;
-    font-size: 3rem; /* Tamaño de la fuente del nombre del logo */
+    font-size: 3rem;
+    /* Tamaño de la fuente del nombre del logo */
 }
 
 /* Ajustes para la imagen del logo */
 .header img {
-    height: 150px; /* Ajusta el tamaño del logo */
+    height: 150px;
+    /* Ajusta el tamaño del logo */
     margin-right: 15px;
 }
 
@@ -113,7 +115,7 @@ h2 {
 
 /* Estilo para las imágenes de las tarjetas */
 .tarjeta-img {
-    width: 50px;
+    width: 75px;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
@@ -161,11 +163,11 @@ h2 {
     color: white;
 }
 
-/* Media Query para pantallas pequeñas (hasta 768px) */
+/* Responsive Design */
 @media (max-width: 768px) {
     .header {
         display: flex;
-        justify-content: space-between;
+        justify-content: center !important;
         align-items: center; 
         width: 100%;
     }
@@ -181,6 +183,7 @@ h2 {
         text-align: center; /* Opcional: centra el texto si es necesario */
         margin: 0; /* Asegura que no haya margen extra */
     }
+    
 
     .nav-links {
         flex-direction: column;
@@ -222,6 +225,8 @@ h2 {
     .nav-links li:nth-child(6) {
         transition-delay: 0.6s;
     }
+
+
 
     /* Ajustes para la tabla */
     .tabla-tarjetas th, .tabla-tarjetas td {
